@@ -4,9 +4,9 @@ pipeline {
         DOCKERHUB_CREDENTIALS = credentials('dockerhub-creds')
     }
     stages {
-        stage {
+        stage('Clone') {
             steps {
-                git "https://github.com/srikanthDevops/node-js-sample.git"
+                git 'https://github.com/srikanthDevops/node-js-sample.git'
             }
         }        
         stage('Build Docker Image') {
