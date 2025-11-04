@@ -12,7 +12,7 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 script {
-                    docker.build("${DOCKERHUB_CREDENTIALS_USR}/nodejs-app:latest")
+                    docker.build("sriki34/nodejs-app:latest")
                 }
             }
         }
